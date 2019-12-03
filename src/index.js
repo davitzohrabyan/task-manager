@@ -10,8 +10,6 @@ app.use(express.json());
 app.use(UserRouter);
 app.use(TaskRouter);
 
-app.listen(port, () => {
-    console.log('Server is up on port ' + port);
-});
+app.listen(port);
 
 
