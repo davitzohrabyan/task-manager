@@ -37,7 +37,7 @@ router.post('/users/logout', auth, async (req, res) => {
         await req.user.save();
         res.send();
     } catch (e) {
-        res.status(500).send();
+        res.status(500).send({ error: 'Internal server error', status: 500 });
     }
 });
 
@@ -62,7 +62,7 @@ router.patch('/users/me', auth, async (req, res) => {
         return allowedUpdates.includes(update);
     });
     if(!isValidOperation) {
-        return res.status(400).send({ error: 'Invalid updates' });
+        return res.status(400).send({ error: 'Invalid updates', status: 400 });
     }
     try {
         updates.forEach((update) => {
