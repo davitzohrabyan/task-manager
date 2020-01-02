@@ -1,7 +1,6 @@
 {
   "name": "task-manager",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
@@ -32,5 +31,17 @@
     "jest": "^24.9.0",
     "nodemon": "^1.19.4",
     "supertest": "^4.0.2"
-  }
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davitzohrabyan/task-manager.git"
+  },
+  "bugs": {
+    "url": "https://github.com/davitzohrabyan/task-manager/issues"
+  },
+  "homepage": "https://github.com/davitzohrabyan/task-manager#readme",
+  "description": ""
 }
